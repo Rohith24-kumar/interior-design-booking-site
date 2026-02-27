@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio - Nordic Designs</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <span>📍 Stockholm, Sweden | 📞 +92 315 146 7374</span>
+        <span>Featured in Architectural Digest</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="index.html" class="logo">Nordic<span>Designs</span></a>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html" class="active">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <a href="contact.html" class="cta-outline">Request a Quote</a>
+        <button class="hamburger" id="hamburger">☰</button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="mt">Request a Quote</a>
+    </div>
+
+    <!-- Portfolio Hero Section -->
+    <section class="portfolio-hero">
+        <div class="container">
+            <div class="portfolio-header text-center mt-80 mb-60">
+                <div class="badge">Our Work</div>
+                <h1 class="hero-title">Designs That Inspire</h1>
+                <p class="hero-desc">Explore our curated collection of transformative interior design projects that showcase our commitment to Scandinavian elegance and functionality.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-buttons text-center mb-40">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="hospitality">Hospitality</button>
+                <button class="filter-btn" data-filter="minimal">Minimal</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-grid-section">
+        <div class="container">
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-item scroll-trigger" data-category="residential minimal">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop" alt="Modern Apartment Stockholm">
+                        <div class="portfolio-overlay">
+                            <h3>Modern Apartment Stockholm</h3>
+                            <p>Residential • Minimal</p>
+                            <a href="#" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item scroll-trigger" data-category="commercial">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&h=600&fit=crop" alt="Creative Office Space">
+                        <div class="portfolio-overlay">
+                            <h3>Creative Office Space</h3>
+                            <p>Commercial • Modern</p>
+                            <a href="#" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item scroll-trigger" data-category="residential">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&h=600&fit=crop" alt="Luxury Villa Interior">
+                        <div class="portfolio-overlay">
+                            <h3>Luxury Villa Interior</h3>
+                            <p>Residential • Luxury</p>
+                            <a href="#" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-item scroll-trigger" data-category="hospitality">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop" alt="Boutique Hotel Lobby">
+                        <div class="portfolio-overlay">
+                            <h3>Boutique Hotel Lobby</h3>
+                            <p>Hospitality • Scandinavian</p>
+                            <a href="#" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-item scroll-trigger" data-category="residential minimal">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&h=600&fit=crop" alt="Minimalist Home Office">
+                        <div class="portfolio-overlay">
+                            <h3>Minimalist Home Office</h3>
+                            <p>Residential • Minimal</p>
+                            <a href="#" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-item scroll-trigger" data-category="commercial">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1481437156560-3205f6a55735?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cmV0YWlsfGVufDB8fDB8fHww?w=800&h=600&fit=crop" alt="Retail Store Design">
+                        <div class="portfolio-overlay">
+                            <h3>Retail Store Design</h3>
+                            <p>Commercial • Modern</p>
+                            <a href="#" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="portfolio-item scroll-trigger" data-category="residential">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop" alt="Coastal Villa Kitchen">
+                        <div class="portfolio-overlay">
+                            <h3>Coastal Villa Kitchen</h3>
+                            <p>Residential • Scandinavian</p>
+                            <a href="#" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="portfolio-item scroll-trigger" data-category="hospitality">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1538333581680-29dd4752ddf2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmVzdGF1cmFudCUyMGludGVyaW9yfGVufDB8fDB8fHww?w=800&h=600&fit=crop" alt="Restaurant Interior">
+                        <div class="portfolio-overlay">
+                            <h3>Restaurant Interior</h3>
+                            <p>Hospitality • Luxury</p>
+                            <a href="#" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="portfolio-item scroll-trigger" data-category="residential minimal">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&h=600&fit=crop" alt="Scandinavian Living Room">
+                        <div class="portfolio-overlay">
+                            <h3>Scandinavian Living Room</h3>
+                            <p>Residential • Minimal</p>
+                            <a href="#" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="portfolio-item scroll-trigger" data-category="commercial">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&h=600&fit=crop" alt="Co-working Space">
+                        <div class="portfolio-overlay">
+                            <h3>Co-working Space</h3>
+                            <p>Commercial • Modern</p>
+                            <a href="#" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11 -->
+                <div class="portfolio-item scroll-trigger" data-category="residential">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&h=600&fit=crop" alt="Penthouse Apartment">
+                        <div class="portfolio-overlay">
+                            <h3>Penthouse Apartment</h3>
+                            <p>Residential • Luxury</p>
+                            <a href="#" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 12 -->
+                <div class="portfolio-item scroll-trigger" data-category="hospitality">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop" alt="Spa & Wellness Center">
+                        <div class="portfolio-overlay">
+                            <h3>Spa & Wellness Center</h3>
+                            <p>Hospitality • Minimal</p>
+                            <a href="#" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="load-more text-center mt-60">
+                <button class="cta-outline">Load More Projects</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header text-center mb-60">
+                <div class="badge">Client Stories</div>
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Hear from the people who have experienced the Nordic Designs difference firsthand.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card scroll-trigger">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Working with Nordic Designs was an absolute pleasure. They transformed our outdated apartment into a beautiful, functional space that perfectly reflects our style. Their attention to detail and commitment to quality exceeded our expectations.</p>
+                    <div class="testimonial-author">
+                        <h4>Sarah Johnson</h4>
+                        <p>Stockholm, Sweden</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card scroll-trigger delay1">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">As a business owner, I needed an office space that would inspire creativity and productivity. Nordic Designs delivered beyond my wildest dreams. The result is a stunning workspace that our employees and clients love.</p>
+                    <div class="testimonial-author">
+                        <h4>Michael Chen</h4>
+                        <p>Copenhagen, Denmark</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card scroll-trigger delay2">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">The team at Nordic Designs truly understands the essence of Scandinavian design. They created a home that is not only beautiful but also incredibly practical for our family. Every detail was thoughtfully considered, and the result is timeless.</p>
+                    <div class="testimonial-author">
+                        <h4>Emma Larsson</h4>
+                        <p>Oslo, Norway</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2 class="cta-title">Have a Project in Mind?</h2>
+            <p class="cta-subtitle">Let's collaborate to create a space that reflects your unique style and meets your functional needs.</p>
+            <a href="contact.html" class="cta-solid mt-40">Start Your Project</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+   <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-col brand">
+      <h3 class="footer-logo">Nordic<span>Designs</span></h3>
+      <p>
+        Award-winning interior design studio specializing in Scandinavian-inspired spaces that blend beauty, functionality, and sustainability.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li>Residential Design</li>
+        <li>Commercial Spaces</li>
+        <li>Design Consultation</li>
+        <li>Renovation & Remodeling</li>
+        <li>Custom Furniture</li>
+      </ul>
+    </div>
+
+    <div class="footer-col contact">
+      <h4>Contact Us</h4>
+
+      <div class="contact-item">
+        <span class="icon">📍</span>
+        <p>Stockholm, Sweden</p>
+      </div>
+
+      <div class="contact-item">
+        <span class="icon">📞</span>
+        <p>+92 315 146 7374</p>
+      </div>
+
+      <div class="contact-item">
+        <span class="icon">✉️</span>
+        <p>hello@nordicdesigns.com</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Nordic Designs. All rights reserved. Designed with ❤️ in Stockholm
+  </div>
+</footer>
+
+
+  <!-- Theme Toggle -->
+<button id="theme-toggle" class="theme-btn">🌙</button>
+
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('show');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = document.querySelectorAll('.mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('show');
+            });
+        });
+
+       // ✅ THEME TOGGLE WITH MEMORY
+    const themeToggle = document.getElementById('theme-toggle');
+
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+        document.body.classList.add("light");
+        themeToggle.textContent = "🌞";
+    } else {
+        document.body.classList.remove("light");
+        themeToggle.textContent = "🌙";
+    }
+
+    // Toggle theme & save
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("light");
+
+        if (document.body.classList.contains("light")) {
+            localStorage.setItem("theme", "light");
+            themeToggle.textContent = "🌞";
+        } else {
+            localStorage.setItem("theme", "dark");
+            themeToggle.textContent = "🌙";
+        }
+    });
+
+    // Form submission
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+            contactForm.reset();
+        });
+    }
+
+    // FAQ toggle
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            const toggle = question.querySelector('.faq-toggle');
+            
+            faqItem.classList.toggle('active');
+            toggle.textContent = faqItem.classList.contains('active') ? '-' : '+';
+        });
+    });
+
+    
+
+
+        // Portfolio filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category').includes(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Scroll animations
+        const scrollTriggers = document.querySelectorAll('.scroll-trigger');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        scrollTriggers.forEach(trigger => {
+            observer.observe(trigger);
+        });
+    </script>
+</body>
+</html>

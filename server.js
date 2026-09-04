@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
@@ -11,8 +12,10 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static files (your HTML, CSS, JS)
 app.use(express.static("public"));
 
-// MongoDB connection (Docker)
-mongoose.connect("mongodb://localhost:27017/contactDB")
+// MongoDB connection (uses MONGODB_URI from environment / .env file)
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/contactDB";
+
+mongoose.connect(MONGODB_URI)
 .then(() => console.log("MongoDB connected 🐳"))
 .catch(err => console.log("Mongo error:", err));
 

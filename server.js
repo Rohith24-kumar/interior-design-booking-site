@@ -38,7 +38,7 @@ const Contact = mongoose.model("Contact", contactSchema);
 
 // Route: Serve homepage
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "index.html"));
+    res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // Route: Handle contact form
@@ -65,7 +65,42 @@ app.post("/contact", async (req, res) => {
     }
 });
 
-// Start server on 5050
-app.listen(5050, () => {
-    console.log("Server running on http://localhost:5050 🔥");
+// Schema: quote requests (modal on index.html)
+const quoteSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    phone: String,
+    service: String,
+    budget: String,
+    description: String,
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
+});
+
+const Quote = mongoose.model("Quote", quoteSchema);
+
+// Route: Handle quote requests
+app.post("/api/quote", async (req, res) => {
+    try {
+        const { name, email, phone, service, budget, description } = req.body;
+
+        if (!name || !email) {
+            return res.status(400).json({ message: "Name and email are required." });
+        }
+
+        await new Quote({ name, email, phone, service, budget, description }).save();
+
+        res.status(201).json({ message: "Quote request received! We'll contact you shortly. 🎉" });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: "Error saving quote request" });
+    }
+});
+
+// Start server (Render provides PORT; falls back to 5050 locally)
+const PORT = process.env.PORT || 5050;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT} 🔥`);
 });

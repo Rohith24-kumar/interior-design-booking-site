@@ -278,15 +278,20 @@ You can inspect all saved data visually at **http://localhost:8081** using Mongo
 
 ## 🌐 Environment
 
-All configuration is hardcoded for local development. The defaults are:
+Configuration is read from environment variables (copy `.env.example` to `.env` locally; **never commit `.env`**).
 
-| Variable | Value |
-|---|---|
-| App Port | `5050` |
-| MongoDB URI | `mongodb://localhost:27017/nordic_designs` |
-| Mongo Express Port | `8081` |
+| Variable | Purpose | Default |
+|---|---|---|
+| `MONGODB_URI` | MongoDB connection string (Atlas or local) | `mongodb://localhost:27017/contactDB` |
+| `PORT` | Port the server listens on (Render sets this) | `5050` |
 
-> If you need to change the MongoDB URI (e.g. for a remote Atlas database), update the `MONGO_URI` constant at the top of `server.js`.
+---
+
+## ☁️ Deploying on Render
+
+1. Create a free MongoDB Atlas cluster, add a database user, and under **Network Access** allow `0.0.0.0/0` (Render's IPs change).
+2. On Render: **New + → Web Service**, connect this repo. Build Command: `npm install`. Start Command: `npm start`.
+3. Add the environment variable `MONGODB_URI` with your Atlas connection string.
 
 ---
 

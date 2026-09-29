@@ -402,14 +402,20 @@ if (contactForm) {
                 body: JSON.stringify(data)
             });
 
-            const result = await response.json();
+            let result = {};
+            try { result = await response.json(); } catch (_) { /* non-JSON reply */ }
 
-            alert(result.message); // ✅ from server
-            contactForm.reset();
+            if (response.ok) {
+                alert(result.message || "Message sent successfully!");
+                contactForm.reset();
+            } else {
+                console.error("Server responded with status", response.status, result);
+                alert(result.message || ("Server error (" + response.status + "). Please try again later."));
+            }
 
         } catch (error) {
             console.error(error);
-            alert("Error sending data 💥");
+            alert("Could not reach the server. Please check your connection and try again.");
         }
     });
 }
